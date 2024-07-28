@@ -1,0 +1,18 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+
+.content {
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    min-width: 335px;
+    margin: 0px auto;
+}
+
+.nav-hero-wrapper {
+    background-color: $hero-bg;
+}

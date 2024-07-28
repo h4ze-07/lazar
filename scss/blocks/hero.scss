@@ -1,0 +1,44 @@
+.hero {
+  @include max-container;
+  background: $hero-bg;
+
+  &__heading {
+    font-size: 40px;
+    color: $main-white;
+    margin-bottom: 26px;
+    margin-top: 70px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $main-white;
+      top: 50%;
+      left: (-102%);
+    }
+  }
+
+  &__text {
+    color: $main-white;
+    font-size: 20px;
+  }
+}
+
+.image-ladder {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__line {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        color: $grey-text;
+        font-size: 18px;
+    }
+}
