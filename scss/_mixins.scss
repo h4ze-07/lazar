@@ -2,3 +2,21 @@
     max-width: 1200px;
     margin: 0px auto;
 }
+
+@mixin section-heading($color, $lineColor, $mTop, $mBottom) {
+    font-size: 40px;
+    color: $color;
+    margin-top: $mTop;
+    margin-bottom: $mBottom;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: $lineColor;
+      top: 50%;
+      left: (-102%);
+    }
+}

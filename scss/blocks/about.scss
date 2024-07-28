@@ -1,0 +1,55 @@
+.about {
+  @include max-container;
+  padding: 139px 0px;
+
+  &__heading {
+    @include section-heading($main-black, $main-black, 0px, 60px);
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__category {
+    background: transparent;
+    color: $grey-text;
+    border: 1px solid $grey-text;
+    padding: 14px 0px;
+    width: 285px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 200ms ease;
+
+    &:hover, &.active {
+        background: $hero-bg;
+        border-color: $hero-bg;
+        color: $main-white;
+    }
+  }
+
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__img {
+    max-width: 895px;
+    flex-grow: 1;
+    object-fit: contain;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 130%;
+  }
+}
