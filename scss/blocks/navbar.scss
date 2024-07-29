@@ -1,13 +1,13 @@
-
-
 .navbar {
-    background: $navbar-bg;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0px auto;
+    position: relative;
+    
 
     &__logo {
         max-width: 165px;
@@ -37,6 +37,7 @@
     &__lang {
         display: flex;
         align-items: center;
+        gap: 5px;
 
         &-text {
             color: $main-white;
@@ -51,4 +52,128 @@
     color: $main-white;
     padding: 12px 18px;
     cursor: pointer;
+}
+
+
+.navbar__burger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    display: none;
+    cursor: pointer;
+
+    img {
+        width: 25px;
+        height: 15px;
+    }
+}
+
+.navbar__mobile-menu {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    height: 100dvh;
+    width: 100%;
+    z-index: 2;
+    background: $hero-bg;
+    text-transform: uppercase;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding-left: 20px;
+
+    color: $main-white;
+    
+    & a {
+        text-decoration: none;
+    }
+
+    & a:visited {
+        color: $main-white;
+    }
+}
+
+.navbar__mobile-menu.hidden {
+    display: none;
+}
+
+.navbar__mobile-lang {
+    margin-top: 111px;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        &__menu {
+            gap: 14px;
+        }
+
+        &__menu-item a {
+            padding: 22px 8px;
+            font-size: 14px;
+
+        }
+    }
+
+    .navbar__btn {
+        font-size: 12px;
+        padding: 16px 8px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        &__logo {
+            width: 110px;
+        }
+        &__menu {
+            gap: 8px;
+        }
+
+        &__menu-item a {
+            padding: 22px 8px;
+            font-size: 10px;
+
+        }
+
+        &__lang {
+            font-size: 10px;
+        }
+    }
+
+    .navbar__btn {
+        font-size: 10px;
+        padding: 16px 8px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .navbar {
+
+        &__menu, &__lang {
+            display: none;
+        }
+    }
+
+    .navbar__burger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navbar {
+        &__logo {
+            max-width: 71px;
+        }
+    }
+
+    .navbar__btn {
+        font-size: 12px;
+        padding: 7px 8px;
+        margin-block: 9px;
+    }
+
 }

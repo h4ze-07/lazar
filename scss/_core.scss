@@ -1,8 +1,10 @@
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Unbounded", sans-serif;
     box-sizing: border-box;
     background: $main-white;
+    font-weight: 300;
 }
+
 
 .content {
     position: relative;
@@ -12,6 +14,14 @@ body {
     max-width: 1200px;
     min-width: 335px;
     margin: 0px auto;
+}
+
+.hero-wrap, .nav-wrap {
+    background-color: $hero-bg;
+}
+
+.nav__transparent-bg {
+    background: $navbar-bg;
 }
 
 .nav-hero-wrapper {

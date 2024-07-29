@@ -1,6 +1,8 @@
 .about {
   @include max-container;
   padding: 139px 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   &__heading {
     @include section-heading($main-black, $main-black, 0px, 60px);
@@ -51,5 +53,100 @@
   &__text {
     font-size: 18px;
     line-height: 130%;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .about {
+
+    &__wrapper {
+      margin: 0px auto;
+    }
+
+    &__description {
+      max-width: 690px;
+    }
+
+    &__img {
+      object-fit: cover;
+    }
+
+    &__category {
+      font-size: 14px;
+      width: 200px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    padding: 60px 20px;
+
+    &__heading {
+      &::before {display: none;}
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      margin: 0px;
+    }
+
+    &__categories {
+      flex-direction: row;
+      align-items: center;
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &__category {
+      white-space: nowrap;
+      flex-basis: 200px;
+      flex-grow: 0;
+    flex-shrink: 0;
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about {
+    padding-top: 0;
+    padding-bottom: 0;
+    &__heading {
+      font-size: 18px;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+
+    &__categories {
+      gap: 10px;
+    }
+
+    &__category {
+      font-size: 12px;
+      padding: 12px 0 13px;
+      text-align: center;
+    }
+
+    &__description {
+      gap: 10px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__img {
+      max-height: 179px;
+    }
   }
 }

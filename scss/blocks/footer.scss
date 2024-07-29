@@ -2,11 +2,13 @@
   @include max-container;
   padding-top: 70px;
   position: relative;
+  padding-inline: 20px;
 
   &::after {
     content: '';
     height: 100%;
-    width: 60%;
+    width: 100%;
+    max-width: 692px;
     background: url(/assets/images/footerImg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,6 +48,12 @@
     font-size: 20px;
     margin-bottom: 199px;
 
+    &-item {
+      flex-direction: column;
+      display: flex;
+      gap: 10px;
+    }
+
     &-title {
         color: $grey-text;
     }
@@ -62,6 +70,7 @@
     z-index: 1;
     color: #C2C2C2;
     font-size: 20px;
+    font-weight: 200;
 
     &-link {
         text-decoration: none;
@@ -69,6 +78,104 @@
         &:hover {
             text-decoration: underline;
         }
+
+        &:visited {
+          color: #C2C2C2;
+        }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .footer {
+    &::after {
+      width: 50%;
+    }
+
+
+    &__rights {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+
+    padding-top: 0;
+
+    &__logo {
+      margin-bottom: 20px;
+      width: 200px;
+    }
+
+    .img-wrap {
+      margin-bottom: 100px;
+    }
+
+    &__contacts {
+      margin-bottom: 100px;
+      font-size: 14px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .footer {
+    &::after {
+      display: none;
+    }
+    
+
+    &__logo {
+      margin-bottom: 20px;
+      width: 200px;
+    }
+
+    .img-wrap {
+      margin-bottom: 50px;
+
+
+        &::before {
+          display: none;
+        }
+    }
+
+    &__contacts {
+      margin-bottom: 50px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer {
+
+    &__logo {
+      width: 157px;
+      height: 54px;
+      margin: 0;
+    }
+
+    &__contacts {
+      gap: 30px;
+      margin-bottom: 70px;
+    }
+
+    &__rights {
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .img-wrap {
+    margin-top: 100px;
+    margin-bottom: 40px;
   }
 }
