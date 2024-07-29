@@ -1,0 +1,124 @@
+.connect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    z-index: 10;
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.connect.hidden {
+    display: none;
+}
+
+.popup {
+    border-radius: 20px;
+    background: $main-white;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px auto;
+    padding: 30px 76px;
+    position: relative;
+    max-width: 600px;
+    margin-inline: 20px;
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+    }
+
+    &__heading {
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        text-align: center;
+        color: #7D7D7D;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        line-height: 130%;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    &__input {
+        background: transparent;
+        border: 1px solid #D6D6D6;
+        outline: none;
+        padding: 15px 18px;
+
+        &::placeholder {
+            color: #7C7C7C;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        background: $main-black;
+        border: none;
+        padding: 12px 57px;
+        cursor: pointer;
+
+        p {
+            text-transform: uppercase;
+            color: $main-white;
+            font-weight: 300;
+            font-family: Unbounded;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .popup {
+        gap: 20px;
+
+        &__heading {
+            font-size: 18px;
+        }
+
+        &__text {
+            font-size: 14px;
+            max-width: 275px;
+        }
+
+        &__inputs {
+            gap: 10px;
+        }
+
+        &__input {
+            font-size: 14px;
+        }
+        
+        &__btn {
+            padding: 11px 47px;
+            
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}

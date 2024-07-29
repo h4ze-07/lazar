@@ -52,6 +52,7 @@
     color: $main-white;
     padding: 12px 18px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 
@@ -72,18 +73,20 @@
 .navbar__mobile-menu {
     position: absolute;
     left: 0;
-    top: 75px;
+    top: 65px;
+    padding-top: 50px;
     height: 100dvh;
     width: 100%;
     z-index: 2;
     background: $hero-bg;
     text-transform: uppercase;
+    overflow: hidden;
 
 
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 60px;
-    padding-left: 20px;
+    
 
     color: $main-white;
     
@@ -94,6 +97,10 @@
     & a:visited {
         color: $main-white;
     }
+
+    li {
+        padding-left: 20px;
+    }
 }
 
 .navbar__mobile-menu.hidden {
@@ -102,7 +109,19 @@
 
 .navbar__mobile-lang {
     margin-top: 111px;
+    color: #C0C0C0;
+
+    span.active {
+        color: $main-white;
+    }
 }
+
+.navbar__mobile-img {
+    position: relative;
+    bottom: 30%;
+    height: 500px;
+}
+
 
 @media screen and (max-width: 1024px) {
     .navbar {
@@ -158,8 +177,17 @@
         }
     }
 
+    .navbar__mobile-menu {
+        display: flex;
+    }
+
     .navbar__burger {
         display: block;
+    }
+
+    .navbar__btn {
+        font-size: 12px;
+        padding: 7px 8px;
     }
 }
 
@@ -167,13 +195,7 @@
     .navbar {
         &__logo {
             max-width: 71px;
+            height: 25px;
         }
     }
-
-    .navbar__btn {
-        font-size: 12px;
-        padding: 7px 8px;
-        margin-block: 9px;
-    }
-
 }

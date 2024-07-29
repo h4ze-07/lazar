@@ -117,6 +117,14 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .about {
+    &__heading {
+      font-size: 26px;
+    }
+  }
+}
+
 @media screen and (max-width: 425px) {
   .about {
     padding-top: 0;

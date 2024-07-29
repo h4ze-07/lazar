@@ -5,6 +5,9 @@ body {
     font-weight: 300;
 }
 
+body.scrollHidden {
+    overflow: hidden;
+}
 
 .content {
     position: relative;

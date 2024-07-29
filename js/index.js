@@ -51,8 +51,37 @@ const categories = [
 
 const   categoriesDiv = document.getElementById('categories'),
         photo = document.getElementById('aboutPhoto'),
-        description = document.getElementById('aboutText');
+        description = document.getElementById('aboutText'),
+        burger = document.getElementById('burger'),
+        mobileNav = document.getElementById('mobileNav'),
+        connectBtn = document.getElementById('connectBtn'),
+        closeBtn = document.getElementById('closeModal'),
+        sectionArea = document.getElementById('connect'),
+        body = document.body;
 
+
+sectionArea.addEventListener('click', function() {
+    if (event.target == sectionArea) {
+        sectionArea.classList.add('hidden')
+        body.classList.toggle('scrollHidden')
+    }
+})
+
+connectBtn.addEventListener('click', function() {
+    body.classList.toggle('scrollHidden')
+    sectionArea.classList.remove('hidden')
+})
+
+closeBtn.addEventListener('click', function() {
+    sectionArea.classList.add('hidden')
+    body.classList.toggle('scrollHidden')
+})
+
+
+burger.addEventListener('click', function () {
+    mobileNav.classList.toggle('hidden')
+    body.classList.toggle('scrollHidden')
+})
 
 
 
