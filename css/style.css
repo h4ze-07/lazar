@@ -570,7 +570,7 @@ body.scrollHidden {
   height: 100%;
   width: 100%;
   max-width: 692px;
-  background: url(/assets/images/footerImg.jpg);
+  background: url(/images/photos/footerImg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;

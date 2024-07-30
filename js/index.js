@@ -14,7 +14,7 @@ const categories = [
     {
         id: 3,
         title: 'лаунж зона та басейн',
-        img: '/assets/images/pool.jpg',
+        img: '/images/photos/pool.jpg',
         description: 'Лаунж зона та басейн на даху – це найкраща зона для вайбу: лише уявіть вдень ви насолоджуєтесь часом з друзями або рідними, а ввечері – споглядаєте на чарівне зоряне небо…',
     },
     {
@@ -86,7 +86,7 @@ burger.addEventListener('click', function () {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    addCategories();
+    // addCategories();
     const categoriesList = [...document.querySelectorAll('#category')];
     let activeCategory = categories[2];
     let activeCategoryText = activeCategory.title;
